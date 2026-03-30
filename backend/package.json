@@ -1,1 +1,0 @@
-{"name": "backend", "scripts": {"dev": "node src/server.js"}}

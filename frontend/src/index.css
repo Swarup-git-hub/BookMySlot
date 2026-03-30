@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Poppins",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  @apply bg-base-100 text-base-content antialiased;
+}
+
+/* Direct Tailwind Custom Classes - No @apply DaisyUI circular deps */
+.custom-btn-primary {
+  @apply px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-primary-600 hover:border-primary-700;
+}
+.custom-btn-success {
+  @apply px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-accent-500 hover:border-accent-600;
+}
+.custom-btn-warning {
+  @apply px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-amber-500 hover:border-amber-600;
+}
+.custom-btn-danger {
+  @apply px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-red-500 hover:border-red-600;
+}
+.custom-btn-secondary {
+  @apply px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-slate-200 hover:border-slate-300;
+}
+.custom-input-primary,
+.custom-select-primary {
+  @apply input input-bordered w-full border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 rounded-xl px-4 py-3 h-12 bg-base-100/90 text-base-content;
+}
+.custom-card-modern {
+  @apply bg-base-100/80 backdrop-blur-xl border border-slate-200/50 shadow-xl rounded-3xl p-8;
+}
+.custom-glass-card {
+  @apply bg-base-100/70 backdrop-blur-xl border border-slate-200/50 rounded-2xl shadow-lg p-6;
+}
+.custom-badge-primary {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-primary-100 text-primary-800 border border-primary-200;
+}
+.custom-badge-success {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-accent-100 text-accent-800 border border-accent-200;
+}
+.custom-badge-warning {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-amber-100 text-amber-800 border border-amber-200;
+}
+.custom-badge-danger {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-red-100 text-red-800 border border-red-200;
+}
+.custom-badge-info {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 border border-blue-200;
+}
+.custom-badge-neutral {
+  @apply inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-base-200 text-base-content border border-slate-200;
+}
+.custom-dialog-overlay {
+  @apply fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center p-8;
+}
+.custom-dialog-content {
+  @apply w-full max-w-4xl max-h-[90vh] bg-base-100 shadow-2xl rounded-3xl overflow-hidden transform scale-100;
+}
+.custom-modal {
+  @apply relative z-[9999];
+}
+.custom-modal-box {
+  @apply bg-base-100 shadow-2xl rounded-3xl max-w-3xl max-h-[90vh] overflow-y-auto p-0 border border-slate-200 mx-auto mt-12 mb-12;
+}
+.custom-btn-outline-danger {
+  @apply border-2 border-red-500 text-red-600 hover:bg-red-50 hover:text-red-700 font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+/* Backwards-compatible aliases for legacy/classname variants used across components */
+.card-modern {
+  @apply custom-card-modern;
+}
+.input-primary {
+  @apply custom-input-primary;
+}
+.select-primary {
+  @apply custom-select-primary;
+}
+.badge-primary {
+  @apply custom-badge-primary;
+}
+.badge-success {
+  @apply custom-badge-success;
+}
+.badge-warning {
+  @apply custom-badge-warning;
+}
+.badge-danger {
+  @apply custom-badge-danger;
+}
+.badge-info {
+  @apply custom-badge-info;
+}
+.badge-neutral {
+  @apply custom-badge-neutral;
+}
+.badge-lg {
+  @apply text-lg px-6 py-3 rounded-3xl shadow-md;
+}
+.badge {
+  @apply inline-flex items-center px-4 py-2 rounded-2xl bg-base-200 text-base-content font-bold;
+}
+.glass-card {
+  @apply custom-glass-card;
+}
+.dialog-overlay {
+  @apply custom-dialog-overlay;
+}
+.dialog-content {
+  @apply custom-dialog-content;
+}
+.modal {
+  @apply custom-modal;
+}
+.modal-box {
+  @apply custom-modal-box;
+}
+.custom-btn-outline {
+  @apply custom-btn-secondary;
+}
+.btn-primary {
+  @apply custom-btn-primary;
+}
+.btn-success {
+  @apply custom-btn-success;
+}
+.btn-danger {
+  @apply custom-btn-danger;
+}
+.btn-secondary {
+  @apply custom-btn-secondary;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl font-bold transition-all;
+}
+.btn-outline {
+  @apply bg-transparent border border-slate-300 hover:bg-slate-50;
+}
+
+/* Subtle glow helpers used across interactive elements */
+.shadow-glow-primary {
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.18);
+}
+.shadow-glow-accent {
+  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.18);
+}
+.shadow-glow-secondary {
+  box-shadow: var(--shadow-glow-secondary);
+}
+.shadow-glow-accent {
+  box-shadow: var(--shadow-glow-accent);
+}
+
+/* Light theme only - ensure readable text/inputs in dialogs/modals */
